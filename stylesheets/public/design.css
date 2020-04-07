@@ -1,0 +1,88 @@
+body{
+	background-image: URL("https://images.unsplash.com/photo-1585160214005-23a90c0314f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;	
+}
+.header{
+	color:white;
+}
+/*navbar left portion decoration*/
+.col-2{
+	background-color: white;
+	height:100vh;
+	width:100%;
+}
+/*navbar right portion decoration*/
+#rightside{
+	background-color:rgb(2,126,189);
+	padding-left: 5px;
+	padding-bottom: 5.5px;
+	width:100%;
+}
+/*leftside navbar color*/
+#background{
+	background-color: rgb(0,102,151);
+}
+#addHeader{ 
+    outline: none;
+    border:none;
+    background:transparent;
+    padding-top: 5px;
+    padding-bottom: 0;
+    color:white;
+}
+#addingText{
+	width: 1100px;
+	outline: none;
+    border:none;
+    background:transparent;
+    color:white;
+}
+#inputDiv{
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 20px;
+	padding-bottom: 5px;
+	background-color: rgba(2,126,189,0.4);
+	border-radius:2px;
+
+}
+#btn{
+	margin-top: 15px;
+	margin-left: 15px;
+	padding: 4px;
+	background-color: rgba(2,126,189,0.7);
+	color:white;
+	border:0;
+	font-size:0.8em;
+	border-radius:5px;
+}
+div li{
+	list-style: none;
+	padding-bottom: 3px;
+
+}
+.fas, .far{
+	font-size: 1.3em;
+	padding: 10px;
+	color: white;
+}
+.fa-inbox, .fa-list-ul{
+	color:lightgrey;
+	margin-right: 5px;
+}
+.fa-bell, .fa-comment{
+	color:lightgrey;
+	margin-right: 5px;
+	padding: 0;
+	margin-left: 15px;
+}
+.sidenav li img {
+    border-radius: 50%;
+    height: 50px;
+	padding-top: 5px; 
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 25%;
+}
