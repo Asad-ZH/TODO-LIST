@@ -1,0 +1,27 @@
+
+/*
+
+  INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. Add this stylesheet to the <head> of your pages
+     <link href="YOUR PATH/1.0.css" rel="stylesheet" type="text/css" />
+     
+  2. Use the file name as data-dd-theme attribute on your datedropper elements
+     <input data-dd-theme="1.0" />
+     
+*/
+
+
+div.datedropper.1.0 {
+
+  --dd-color1: #1ea9fa;
+  --dd-color2: #FFF;
+  --dd-color3: #4D4D4D;
+  --dd-color4: #FFF;
+
+  --dd-radius: 12px;
+  --dd-width: 189px;
+  --dd-shadow: 0 0 25px 6px rgba(0, 0, 0, 0.1);
+
+}
+

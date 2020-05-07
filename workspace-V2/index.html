@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" /> 
+
+        <title>Inbox - Wunderlist</title>
+                        <!-- title icon -->
+        <link rel="icon" href="C:\Users\Hp\Desktop\Wunderlist_Logo.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="C:\Users\Hp\Desktop\Wunderlist_Logo.png" type="image/x-icon" />
+        				 <!-- link for icons -->
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">  
+                        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">	
+                        <!-- custom stylesheet -->
+        <link rel="stylesheet" href="style.css">
+                        <!-- jquery CDN  -->
+	    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+                        <!-- jquery ui CDN -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+                            <!-- datedropper -->
+        <script src="https://cdn.datedropper.com/get/mpktlkeq64zetlnqsc2h3l5015w4i35b"></script>
+        <script src="datedropper.pro.min.js"></script>
+        <link rel="stylesheet" href="style-date.css">
+      
+    </head>
+    <body>
+
+        <div class="row">
+
+            <div id="hey" class="column-left HEY">
+                <!-- navbar -->
+              <div id="nav-left">
+                    <a onclick="myFunction()" class="inline" id="hamburger" href="#"><i class="fas fa-bars"></i></a>
+                    <form id="addForm" class="hide inline">
+                        <input id="addHeader" type="text">
+                    </form>
+                    <a href="#"><i onclick="iconChange()" id="searchIcon" class="hide fas fa-search"></i></a>
+                </div>
+                <span class="hiding_dropdown">
+                <div class="sidenav">
+                    <li>
+                      <img src="https://images.unsplash.com/photo-1542080255-e564af7ae266?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"><a class="profileParent" href="#"><span class="hide profile">asadzahid147...</span><i class="hide arrowright"></i></a>
+                      <i class="hide profile far fa-bell"></i><i class="hide profile far fa-comment"></i>
+                    </li>
+                    <!-- dropdown menu 3 -->
+                    <div id="thirdDropdown">
+                        <div class="profileDropdown">
+                          <ul>
+                            <li class=" disable">Last Synced a 2 minutes ago</li>
+                            <li class="borer-down">Sync Now</li>
+                            <li>Account Settings</li>
+                            <li>Change Background</li>
+                            <li class="borer-down">Restore deleted lists</li>
+                            <li>Install the Browser Extension</li>
+                            <li>Love Wunderlist?</li>
+                            <li>Tell Your Friends...</li>
+                            <li class="borer-down">Wunderlist Website</li>
+                            <li class="disable">asadzahid1479@gmail.com</li>
+                            <li>Sign Out</li>
+                          </ul>
+                        </div>
+                    </div>
+
+                    <!-- popup form -->
+                    <!-- <div class="myCommentForm">
+                        <div style="display: initial;" class="commentForm">
+                            <div>
+                            <div><strong>Conversations</strong></div>
+                            <div>
+                                <i class="fas fa-comments"></i>
+                                <div>No Conversations</div>
+                                <div>Start a Conversations now by commenting on a to-do in shared list</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div> -->
+
+                    <li rel="listId0" class="list0 001 active001"><i style="color:skyblue" class="fas fa-inbox"></i><span class="hide">Inbox</span></li>
+                    <li class=" hiddenIcon increasingPadding"><i style="margin-left: 5px;" class=" fas fa-ellipsis-v"></i></li>
+                    <li rel="listId1" class="list1 increasingPadding deleted"><i class="hide fas fa-list-ul"></i><a class="removingADeco" href="#"><span class="hide">Groceries</span></a></li>
+                    <li rel="listId2" class="list2 increasingPadding deleted"><i class="hide fas fa-list-ul"></i><a class="removingADeco" href="#"><span class="hide">Movies to Watch</span></a></li>
+                    <li rel="listId3" class="list3 increasingPadding deleted"><i class="hide fas fa-list-ul"></i><a class="removingADeco" href="#"> <span class="hide">Private</span></a></li>
+                    <a id="create-user" href="#"><li class="footer"><i id="createIcon" class="fas fa-plus"></i><span class="hide">Create List</span></li></a>
+                </div>
+                </span>
+            </div>
+    
+            <div class=" column-center">
+              <div id="nav-right">
+                  <div id="name">Inbox</div>
+                  <div id="iconsOfNavbar">
+                    <a href="#"><i class=" fas fa-user-plus"></i></a>
+                    <a id="sortDropdown" href="#"><i class=" fas fa-sort-alpha-up"></i></a>
+                    <a id="menuDropdown" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                  </div>
+              </div>
+              <!-- dropdown menu -->
+                  <div id="dropdown1" class="dropdown">
+                      <ul class="myDropdown" >
+                          <ul>
+                          <li><a href="#"><i class="far fa-clone"></i>Duplicate List</a></li>
+                          <li><a href="#"><i class="far fa-copy"></i>Copy Selected To-Do</a></li>
+                          <li><a href="#"><i class="far fa-envelope"></i>Email List</a></li>
+                          <li><a href="#"><i class="far fa-envelope"></i>Email Selected To-do</a></li>
+                          <li><a href="#"><i class="fas fa-print"></i>Print List</a></li>
+                          <li><a href="#"><i class="fas fa-print"></i>Print Selected To-do</a></li>
+                          <li><a href="#"><i class="fas fa-volume-mute"></i>Do Not Disturb</a></li>
+                          <li><a href="#"><i class="fas fa-trash-alt"></i>Delete Selected To-do</a></li>
+                        </ul>
+                      </ul>
+                  </div>
+              <!-- dropdown menu -2 -->
+              <div>
+                <div id="dropdown2" class="dropdown">
+                    <ul class="myDropdown" >
+                        <ul>
+                            <li><a href="#"><i class="fas fa-sort-alpha-up"></i>Sort Alphabetically</a></li>
+                            <li><a href="#"><i class="fas fa-calendar"></i>Sort by Due Date</a></li>
+                            <li><a href="#"><i class="far fa-clock"></i>Sort by Creation Date</a></li>
+                            <li><a href="#"><i class="fas fa-user-check"></i>Sort by assignee</a></li>
+                            <li><a href="#"><i class="far fa-star"></i>Sort by Priorty</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+              <!-- center input form  -->
+              <span class="hiding_dropdown">  
+              <span id="inputDiv">
+                    <div id="innerInput">
+                      <a href="#"><i id="mainIcon" class="fas fa-plus"></i></a>
+                      <input id="addingText" type="text" placeholder="Add a to-do...">
+                    </div>
+                    <div style="display:default" class="searchIcon">
+                        <a  href="#"><i id="inputCalender" class=" fas fa-calendar"></i></a>
+                        <input id="dateOnIcon" type="text" style="height: 0;width: 0;" class="datedropper-init">
+                        <a href="#"><i class="far fa-star"></i></a>
+                    </div>
+                </span>
+
+                <!-- ========================== -->
+                <!-- one div represent on list  -->
+                <!-- ========================== -->
+                    <ul onchange="moved(),selecting()" class="UnChecked">
+                        <div class="listId0 active002">
+                            <li class="selecting"><input  type="checkbox">hi there<i class="far fa-star"></i></li>
+                        </div>
+                        <div class="listId1">
+                            <li class="selecting"><input  type="checkbox">hi<i class="far fa-star"></i></li>
+                        </div>
+                        <div class="listId2"></div>
+                        <div class="listId3"></div>
+                    </ul>
+
+                        <!-- button to hide and show the completed task -->
+                        <button id="btn">SHOW COMPLETED TO_DOS</button>
+  
+                    <ul onchange="moveBack()" class="Checked">
+                        <div class="listId0 active002">
+                            <li class="selecting"><input class="complete" checked type="checkbox">bye there1<i class="far fa-star"></i></li>
+                            <li class="selecting"><input class="complete" checked type="checkbox">bye there2<i class="far fa-star"></i></li>
+                        </div>
+                        <div class="listId1">
+                            <li class="selecting"><input class="complete" checked type="checkbox">bye<i class="far fa-star"></i></li>
+                        </div>
+                        <div class="listId2"></div>
+                        <div class="listId3"></div>
+                    </ul>
+                    
+                <!-- ========================== -->
+                <!-- ========================== -->
+
+             </span>
+                <!-- popup delete form -->
+                <div class="overlay1">
+                    <div class="content1">
+                        <div id="justifing_content">                        
+                            <div><img src="C:\Users\Hp\Desktop\Wunderlist_Logo.png"></div>
+                            <div>
+                                <div><strong>"$$$$$" will be delted forever</strong></div>
+                                <br>
+                                <div>You will not be able to undo this action</div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div>
+                            <button id="cancelDelete">Cancel</button><button id="confirmDelete">Delete List</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- popup add list form -->
+                <div id="popup" style="display: none;">
+                    <div class="overlay"></div>
+                    <div class="content">
+                      <header>
+                        <div id="headerForm">Create New List</div>
+                      </header>
+                      <form>
+                        <input id="nameOfHeading" class="popupForm" type="text" placeholder="List Name" >
+                        <div class="swap">
+                            <a id="listMem" href="#">LIST MEMBERS</a>
+                            <a id="listOpt" disabled href="#">LIST OPTIONS</a>
+                        </div>
+                        <input id="email" class="popupForm" type="text" placeholder="Name or email address.. ">
+                        <br>
+                        <hr>
+                        <div id="formIds">
+                            <img class="popupImage" src="https://images.unsplash.com/photo-1542080255-e564af7ae266?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"><span class="formEmail">asadzahid1479@gmail.com</span><span id="formOwner">owner</span>
+                        </div>
+                        <hr>
+                        <div id="formButton">
+                           <button id="closeForm0">Cancel</button><button id="closeForm1">Save</button>
+                        </div>
+
+                      </form>
+                    
+                    </div>
+                </div>
+          </div>
+                    
+            <!-- right pop up menu -->
+    
+            <div id="right" class="column-right popup">
+                <li id="mainLi"><input style type="checkbox">hi there<i class="far fa-star"></i></li>
+                <div id="right-sidebar-upper">                    
+                   <div><i class="far fa-calendar-alt"></i><input id="datepicker" type="text" placeholder="Set Due Date" class="datedropper-init" data-theme="style-date" data-large-mode="true" data-large-default="true"></div>
+                   <div><i class="far fa-clock"></i>Remind me</div>
+                   <div><i class="fas fa-plus"></i>Add a subtask</div>
+                   <div><i class="fas fa-pencil-alt"></i>Add a note...<i class="far fa-edit"></i></div>
+                   <div><i class="fas fa-paperclip"></i>Add a file</i><i class="fab fa-dropbox"></i><i class="fas fa-microphone"></i></div>
+                </div>
+                <div id="right-sidebar-lower">
+                    <hr>
+                    <input id="comment" type="text" placeholder="Add a comment...">
+                   <div>
+                        <i id="closingIconOfHiddenSideBar" class="far fa-caret-square-right"></i>
+                        <span>Created in Fri,April 10</span>
+                        <i  class="fas delted fa-trash-alt"></i>
+                   </div>
+                </div>
+            </div>
+            
+        </div>
+                <!-- first contextmenu -->
+                <div id="ContextMenu1" class=" myContextMenu">
+                    <li><i class="fas fa-check"></i>Mark as Completed</li>
+                    <li><i class="far fa-star"></i>Mark as Starred</li>
+                    <hr class="contextMenuHr">
+                    <li><i class="far fa-calendar-alt"></i>Due Today</li>
+                    <li><i class="far fa-calendar-alt"></i>Due Tommorrow</li>
+                    <li><i class="far fa-calendar-alt"></i>Remove Due Date</li>
+                    <hr class="contextMenuHr">
+                    <li><i class="fas fa-plus"></i>Create a new list from To-do</li>
+                    <li><i class="fas fa-angle-double-down"></i>Move to-do to...</li>
+                    <li><i class="far fa-envelope"></i>Email Selected To-do</li>
+                    <li><i class="fas fa-print"></i>Print Selected To-do</li>
+                    <hr class="contextMenuHr">
+                    <li><i class="far fa-clone"></i>Copy To-do</li>
+                    <li class="delted"><i class="fas fa-trash-alt"></i>Delete To-do</li>
+                </div>
+
+                <!-- second contextmenu -->
+                <div id="ContextMenu2" class=" myContextMenu">
+                    <li><i class="far fa-folder"></i>Create a Folder</li>
+                    <hr>
+                    <li><i class="fas fa-pencil-alt"></i>Rename List</li>
+                    <li><i class="fas fa-user-plus"></i>Add People</li>
+                    <hr>
+                    <li><i class="far fa-envelope"></i>Email List</li>
+                    <li><i class="fas fa-print"></i>Print List</li>
+                    <hr>
+                    <li><i class="far fa-copy"></i>Copy List</li>
+                    <li><i class="far fa-clone"></i>Duplicate List</li>
+                    <li class="delted"><i class="fas fa-trash-alt"></i>Delete List</li>
+                </div>
+
+                 <!-- third contextmenu -->
+                 <div id="ContextMenu3" class=" myContextMenu">
+                    <li><i class="fas fa-check"></i>Mark as Not Completed</li>
+                    <hr>
+                    <li><i class="far fa-envelope"></i>Email Selected To-do</li>
+                    <li><i class="fas fa-print"></i>Print Selected To-do</li>
+                    <hr>
+                    <li><i class="far fa-copy"></i>Copy To-do</li>
+                    <li id="del"><i class="fas fa-trash-alt"></i>Delete To-do</li>
+                </div>
+
+        <script type="text/javascript" src="func.js"></script>
+
+    </body>
+</html>
